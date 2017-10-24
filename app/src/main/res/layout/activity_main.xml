@@ -4,45 +4,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/Framelayout_main"
+    <com.hjm.bottomtabbar.BottomTabBar
+        xmlns:hjm="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bar333"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_height="match_parent"
+        hjm:tab_font_size="8sp"
+        hjm:tab_img_font_padding="0dp"
+        hjm:tab_img_height="30dp"
+        hjm:tab_img_width="30dp"
+        hjm:tab_padding_bottom="5dp"
+        hjm:tab_padding_top="8dp"
+        hjm:tab_selected_color="#f20b0f"
+        hjm:tab_unselected_color="#080808"
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="#F1F1F9"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="4">
-
-        <RadioButton
-            android:id="@+id/rad_punch_card"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:id="@+id/rad_report"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:id="@+id/rad_inform"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:id="@+id/rad_user"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </RadioGroup>
+        />
 
 
-</LinearLayout> 
+
+
+</LinearLayout>
