@@ -8,7 +8,7 @@
         android:id="@+id/bar333"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        hjm:tab_font_size="8sp"
+        hjm:tab_font_size="5sp"
         hjm:tab_img_font_padding="0dp"
         hjm:tab_img_height="30dp"
         hjm:tab_img_width="30dp"
