@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.hjm.bottomtabbar.BottomTabBar
-        xmlns:hjm="http://schemas.android.com/apk/res-auto"
+    <com.hjm.bottomtabbar.BottomTabBar xmlns:hjm="http://schemas.android.com/apk/res-auto"
         android:id="@+id/bar333"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +16,8 @@
         hjm:tab_padding_top="8dp"
         hjm:tab_selected_color="#f20b0f"
         hjm:tab_unselected_color="#080808"
+
         />
+
 
 </LinearLayout>

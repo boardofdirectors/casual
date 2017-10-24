@@ -16,7 +16,7 @@ import app.swiremedicine.view.fragment.User_Fragment;
 public class MainActivity extends AppCompatActivity{
     private BottomTabBar tabBar;
 
-
+    //新建分支
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
