@@ -30,6 +30,10 @@ import app.swiremedicine.R;
  * Created by 王坤 on 2017/10/23.
  */
 
+/**
+ * 郝建澄 打卡页面
+ * 2017/10/25
+ */
 public class Punch_card_Fragment extends Fragment {
     private TextView dingweitv;
     public AMapLocationClient mLocationClient = null;
