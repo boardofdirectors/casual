@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#95a795"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +24,11 @@
             android:gravity="center"
             />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,6 +58,20 @@
             android:layout_height="0dp"
             android:layout_weight="8"
             >
+            <app.swiremedicine.view.CastomView.MyButton
+                android:id="@+id/sahngbandaka"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="shangbandaka"
+                />
+            <app.swiremedicine.view.CastomView.MyButton2
+                android:id="@+id/chuchaidaka"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
 
 
         </LinearLayout>

@@ -18,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -25,6 +26,8 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 
 import app.swiremedicine.R;
+import app.swiremedicine.view.CastomView.MyButton;
+import app.swiremedicine.view.CastomView.MyButton2;
 
 /**
  * Created by 王坤 on 2017/10/23.
@@ -37,6 +40,8 @@ import app.swiremedicine.R;
 public class Punch_card_Fragment extends Fragment {
     private TextView dingweitv;
     public AMapLocationClient mLocationClient = null;
+    private MyButton shangbandaka;
+    private MyButton2 chuchadaka;
     //permission.ACCESS_FINE_LOCATION定位权限
     public static final String LOCATION_PERMISSION = Manifest.permission.ACCESS_FINE_LOCATION;
     public static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
@@ -73,7 +78,6 @@ public class Punch_card_Fragment extends Fragment {
 
     //声明AMapLocationClientOption对象
     public AMapLocationClientOption mLocationOption = null;
-    private String packageName;
 
     @Nullable
     @Override
@@ -116,6 +120,7 @@ public class Punch_card_Fragment extends Fragment {
          */
         //该方法默认为false，true表示只定位一次
         mLocationOption.setOnceLocation(true);
+        getdaka();
 
     }
 
@@ -131,7 +136,30 @@ public class Punch_card_Fragment extends Fragment {
                 }
                 break;
         }
+
+
     }
+
+    private void getdaka() {
+        shangbandaka=getActivity().findViewById(R.id.sahngbandaka);
+        chuchadaka=getActivity().findViewById(R.id.chuchaidaka);
+
+        shangbandaka.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "上班打卡", Toast.LENGTH_SHORT).show();
+            }
+        });
+        chuchadaka.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "出差打卡", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+    }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
