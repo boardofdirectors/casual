@@ -13,7 +13,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,10 +91,10 @@ public class Punch_card_Fragment extends Fragment {
         dingweitv=getActivity().findViewById(R.id.dingweitv);
 
         if (ContextCompat.checkSelfPermission(getActivity(), LOCATION_PERMISSION) == PackageManager.PERMISSION_GRANTED) {
-            Log.e(TAG, "===========检查权限---用户已经拥有定位这个权限了");
+//            Log.e(TAG, "===========检查权限---用户已经拥有定位这个权限了");
 
         } else {
-            Log.e(TAG, "===========检查权限---用户没有定位这个权限");
+//            Log.e(TAG, "===========检查权限---用户没有定位这个权限");
             ActivityCompat.requestPermissions(getActivity(), new String[]{LOCATION_PERMISSION}, LOCATION_PERMISSION_REQUEST_CODE);
         }
 
@@ -130,9 +129,9 @@ public class Punch_card_Fragment extends Fragment {
         switch (requestCode){
             case GO_TO_SETTING_REQUEST_CODE:
                 if (ContextCompat.checkSelfPermission(getActivity(), LOCATION_PERMISSION) == PackageManager.PERMISSION_GRANTED) {
-                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户已经拥有定位这个权限了");
+//                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户已经拥有定位这个权限了");
                 } else {
-                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户没有开启这个权限，在这不用再去请求权限了");
+//                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户没有开启这个权限，在这不用再去请求权限了");
                 }
                 break;
         }
@@ -169,9 +168,9 @@ public class Punch_card_Fragment extends Fragment {
             case LOCATION_PERMISSION_REQUEST_CODE:
                 if (permissions[0].equals(LOCATION_PERMISSION)) {
                     if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                        Log.e(TAG, "===========权限回调---用户同意了");
+//                        Log.e(TAG, "===========权限回调---用户同意了");
                     } else {
-                        Log.e(TAG, "===========权限回调---用户拒绝了");
+//                        Log.e(TAG, "===========权限回调---用户拒绝了");
 
                         //// TODO: 2017/10/16
                         //如果有系统权限弹窗的话，就不用去解释权限了直接告诉用户怎么设置就行
@@ -183,13 +182,13 @@ public class Punch_card_Fragment extends Fragment {
                          * 如 果系统不再解释权限，我们去解释权限 （用户勾选了不再询问，系统就不会再解释权限了）
                          */
                         if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),LOCATION_PERMISSION)){
-                            Log.e(TAG,"=========== shouldShowRequestPermissionRationale 返回值为 true");
+//                            Log.e(TAG,"=========== shouldShowRequestPermissionRationale 返回值为 true");
 
                             //返回tue 因为系统刚刚有权限弹窗，所以不用解释了，直接告诉用户如何开启权限
                             showTipGoSetting();
                         }else {
                             //返回false ，用户勾选了  不再询问，之后系统也不会再弹出系统权限弹框，所以我们自己弹框解释
-                            Log.e(TAG,"=========== shouldShowRequestPermissionRationale 返回值为 false");
+//                            Log.e(TAG,"=========== shouldShowRequestPermissionRationale 返回值为 false");
                             showTipExplainPermission();
 
                         }

@@ -32,24 +32,23 @@ public class MyButton extends View {
 
     private void init() {
         mPaint=new Paint();
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setDither(true);
-        mPaint.setColor(Color.parseColor("#65939A"));
-        mPaint.setStrokeCap(Paint.Cap.SQUARE);//方点
+
 
         mPaint1=new Paint();
-        mPaint1.setAntiAlias(true);
-        mPaint1.setStyle(Paint.Style.FILL);
-        mPaint1.setDither(true);
-        mPaint1.setColor(Color.parseColor("#00FFFF"));
-        mPaint1.setStrokeCap(Paint.Cap.SQUARE);//方点
+
+        //方点
 
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        mPaint.setAntiAlias(true);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(Color.parseColor("#65939A"));
+        mPaint1.setAntiAlias(true);
+        mPaint1.setStyle(Paint.Style.FILL);
+        mPaint1.setColor(Color.parseColor("#00FFFF"));
         Paint paint=mPaint;
         Paint paint1=mPaint1;
 
@@ -57,6 +56,7 @@ public class MyButton extends View {
         canvas.drawRoundRect(90,500,490,900,100,100,paint1);
         paint1.reset();
         paint1.setTextSize(80);
+        mPaint1.setColor(Color.RED);
         canvas.drawText("上班打卡",160,700,paint1);
     }
 }

@@ -32,19 +32,7 @@ public class MyButton2 extends View {
 
     private void init() {
         mPaint=new Paint();
-        mPaint.setAntiAlias(true);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setDither(true);
-        mPaint.setColor(Color.parseColor("#65939A"));
-        mPaint.setStrokeCap(Paint.Cap.SQUARE);//方点
-
         mPaint1=new Paint();
-        mPaint1.setAntiAlias(true);
-        mPaint1.setStyle(Paint.Style.FILL);
-        mPaint1.setDither(true);
-        mPaint1.setColor(Color.parseColor("#00FFFF"));
-        mPaint1.setStrokeCap(Paint.Cap.SQUARE);//方点
-
     }
 
     @Override
@@ -52,11 +40,20 @@ public class MyButton2 extends View {
         super.onDraw(canvas);
         Paint paint=mPaint;
         Paint paint1=mPaint1;
+        mPaint.setAntiAlias(true);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setDither(true);
+        mPaint.setColor(Color.parseColor("#65939A"));
+        mPaint1.setAntiAlias(true);
+        mPaint1.setStyle(Paint.Style.FILL);
+        mPaint1.setDither(true);
+        mPaint1.setColor(Color.parseColor("#00FFFF"));
 
         canvas.drawCircle(290,700,250,paint);
         canvas.drawRoundRect(90,500,490,900,100,100,paint1);
-        paint1.reset();
-        paint1.setTextSize(80);
+        mPaint1.reset();
+        mPaint1.setTextSize(80);
+        mPaint1.setColor(Color.RED);
 
         canvas.drawText("出差打卡",160,700,paint1);
     }

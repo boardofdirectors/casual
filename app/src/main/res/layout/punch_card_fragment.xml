@@ -48,7 +48,9 @@
                 android:inputType="text"
                 android:gravity="center"
                 android:background="@drawable/edshape"
-                android:hint="   备注"/>
+                android:hint="   备注"
+
+                />
 
 
 
@@ -63,7 +65,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="shangbandaka"
                 />
             <app.swiremedicine.view.CastomView.MyButton2
                 android:id="@+id/chuchaidaka"
