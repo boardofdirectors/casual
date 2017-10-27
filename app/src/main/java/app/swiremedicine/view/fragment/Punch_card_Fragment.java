@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,10 +66,10 @@ public class Punch_card_Fragment extends Fragment {
 //                    +adCode+aoiName+buildingId+floor);
                     dingweitv.setText("精度："+locationType+"--维度："+latitude+" ---城市："+city+"城区信息："+district);
                 }else {
-                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
-//                    Log.e("AmapError","location Error, ErrCode:"
-//                            + amapLocation.getErrorCode() + ", errInfo:"
-//                            + amapLocation.getErrorInfo());
+//                    定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
+                    Log.e("AmapError","location Error, ErrCode:"
+                            + amapLocation.getErrorCode() + ", errInfo:"
+                            + amapLocation.getErrorInfo());
                 }
             }
 
@@ -88,7 +89,7 @@ public class Punch_card_Fragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        dingweitv=getActivity().findViewById(R.id.dingweitv);
+        dingweitv= (TextView) getActivity().findViewById(R.id.dingweitv);
 
         if (ContextCompat.checkSelfPermission(getActivity(), LOCATION_PERMISSION) == PackageManager.PERMISSION_GRANTED) {
 //            Log.e(TAG, "===========检查权限---用户已经拥有定位这个权限了");
@@ -140,8 +141,8 @@ public class Punch_card_Fragment extends Fragment {
     }
 
     private void getdaka() {
-        shangbandaka=getActivity().findViewById(R.id.sahngbandaka);
-        chuchadaka=getActivity().findViewById(R.id.chuchaidaka);
+        shangbandaka= (MyButton) getActivity().findViewById(R.id.sahngbandaka);
+        chuchadaka= (MyButton2) getActivity().findViewById(R.id.chuchaidaka);
 
         shangbandaka.setOnClickListener(new View.OnClickListener() {
             @Override

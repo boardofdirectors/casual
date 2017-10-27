@@ -51,7 +51,7 @@ public class User_Fragment extends Fragment {
     }
 
     private void gettouxiang() {
-        touxiang = getActivity().findViewById(R.id.touxiang);
+        touxiang = (ImageView) getActivity().findViewById(R.id.touxiang);
         touxiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
