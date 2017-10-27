@@ -129,7 +129,7 @@ public class Punch_card_Fragment extends Fragment {
         switch (requestCode){
             case GO_TO_SETTING_REQUEST_CODE:
                 if (ContextCompat.checkSelfPermission(getActivity(), LOCATION_PERMISSION) == PackageManager.PERMISSION_GRANTED) {
-//                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户已经拥有定位这个权限了");
+//                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户已经拥有定位这个权限了，");
                 } else {
 //                    Log.e(TAG, "===========设置页面返回之后-再次检查权限---用户没有开启这个权限，在这不用再去请求权限了");
                 }
