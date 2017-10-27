@@ -27,9 +27,10 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:src="@mipmap/touxiang"
             android:id="@+id/touxiang"
+            android:layout_gravity="center"
             />
         <LinearLayout
             android:layout_width="0dp"
@@ -61,9 +62,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
-        >
-
+        android:layout_weight="7">
 
     </LinearLayout>
 </LinearLayout>

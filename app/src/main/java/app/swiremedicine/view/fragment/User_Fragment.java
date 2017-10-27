@@ -114,7 +114,7 @@ public class User_Fragment extends Fragment {
         Bundle extras = data.getExtras();
         if (extras != null) {
             Bitmap photo = extras.getParcelable("data");
-//            photo = Utils.toRoundBitmap(photo, tempUri); // 这个时候的图片已经被处理成圆形的了
+            photo = Utils.toRoundBitmap(photo); // 这个时候的图片已经被处理成圆形的了
             touxiang.setImageBitmap(photo);
             uploadPic(photo);
         }
